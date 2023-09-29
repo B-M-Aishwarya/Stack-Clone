@@ -20,7 +20,7 @@ export const task = async () => {
   }
 };
 
-cron.schedule('0 0 */5 * *', task, {
+cron.schedule('0 0 * * *', task, {
   timezone: 'Asia/Kolkata', 
 });
 
