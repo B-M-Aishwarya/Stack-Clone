@@ -34,6 +34,7 @@ app.use('/', planRoutes)
 const PORT = process.env.PORT || 5000
 
 cron.schedule('0 0 */5 * *', () => {
+  console.log('Cron job scheduled at day');
   task.start()
 });
 
