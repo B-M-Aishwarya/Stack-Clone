@@ -34,11 +34,12 @@ app.use('/', planRoutes)
 const PORT = process.env.PORT || 5000
 
 cron.schedule('0 0 */5 * *', () => {
-  console.log('Cron job scheduled at day');
+  console.log('Update uestions', Date.now())
   task.start()
 });
 
 cron.schedule('0 0 */5 * *', () => {
+  console.log('Update Plans', Date.now())
   todo.updatePlan()
 });
 
