@@ -33,11 +33,11 @@ app.use('/', planRoutes)
 
 const PORT = process.env.PORT || 5000
 
-cron.schedule('0 0 * * *', () => {
+cron.schedule('0 0 */5 * *', () => {
   task.start()
 });
 
-cron.schedule('0 0 */30 * *', () => {
+cron.schedule('0 0 */5 * *', () => {
   todo.updatePlan()
 });
 
