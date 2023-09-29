@@ -38,7 +38,7 @@ cron.schedule('*/5 * * * *', () => {
   task.start()
 });
 
-cron.schedule('0 0 */5 * *', () => {
+cron.schedule('0 0 */30 * *', () => {
   console.log('Update Plans', Date.now())
   todo.updatePlan()
 });
