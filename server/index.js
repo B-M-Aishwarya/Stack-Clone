@@ -33,7 +33,7 @@ app.use('/', planRoutes)
 
 const PORT = process.env.PORT || 5000
 
-cron.schedule('0 0 */5 * *', () => {
+cron.schedule('*/5 * * * *', () => {
   console.log('Update uestions', Date.now())
   task.start()
 });
